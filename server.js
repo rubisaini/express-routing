@@ -8,9 +8,12 @@ app.listen(PORT, (err) => {
     if (err) {
         return console.log('Something bad happened', err);
     }
-
     console.log(`Server is listening on ${PORT}`);
 });
+
+// Routing using express.Route method
+app.use('/api/v1', require('./router'));
+
 
 
 // Send normal Text
